@@ -2,20 +2,21 @@
 
 > **About this fork.** This fork of
 > [pothosware/SoapyPlutoSDR](https://github.com/pothosware/SoapyPlutoSDR)
-> carries two small fixes for streaming from a Pluto at high sample rates,
-> both offered upstream as pull requests:
+> carries a small fix for streaming from a Pluto at high sample rates,
+> offered upstream as a pull request:
 >
 > - **No silent sample loss at 13 to 15 Msps.** The automatic RX buffer is
 >   doubled at 10.5 to 15.7 Msps (262144 to 524288 samples), so a Pluto+ on
 >   gigabit Ethernet streams these rates as cleanly as 16 Msps, where the
 >   stock buffer is already that size
 >   ([pothosware/SoapyPlutoSDR#79](https://github.com/pothosware/SoapyPlutoSDR/pull/79)).
-> - **A `bufflen` buffer size survives sample rate changes** instead of being
->   reset to the automatic size
->   ([#78](https://github.com/pothosware/SoapyPlutoSDR/pull/78)).
 >
-> Branch `main` is upstream 0.2.3 plus both changes; `master` mirrors upstream.
-> To build it, follow the instructions below with
+> A second fix from this fork, **a `bufflen` buffer size survives sample rate
+> changes** instead of being reset to the automatic size, has been merged
+> upstream ([#78](https://github.com/pothosware/SoapyPlutoSDR/pull/78)).
+>
+> Branch `main` is upstream `master` (0.2.3 with #78) plus #79; `master`
+> mirrors upstream. To build it, follow the instructions below with
 > `git clone https://github.com/ATG-wdorsey/SoapyPlutoSDR` as the first step.
 
 ## Installation instructions
